@@ -1,0 +1,13 @@
+/*售后管理查询*/
+
+.coupon {
+	width: auto;
+	height: auto;
+	min-width: 1100px;
+	margin: 0 20px;
+}
+.coupon-search .form-inline{ margin-top: 20px}
+
+.coupon-list .navTable li a {
+	color: #3ec4ba;
+}

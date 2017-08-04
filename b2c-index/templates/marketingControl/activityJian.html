@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>营销管理-满减活动</title>
+    <link href="../../style/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../style/common.css" rel="stylesheet" type="text/css">
+    <link href="../../style/framework/marketingControl/activityJian.css" rel="stylesheet" type="text/css">
+    <script src="../../scripts/jquery.min.js"></script>
+    <script src="../../scripts/bootstrap.min.js"></script>
+</head>
+<body>
+<!--满减活动-->
+<div class="common-view">
+    <!--标题-->
+    <p class="common-title">营销管理<span>&gt;</span>满减活动</p>
+
+    <!--主体内容-->
+    <div class="common-total">
+        <div class="activityMan-total">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#now" data-toggle="tab">报名活动中</a></li>
+                <li><a href="#loading" data-toggle="tab">正在进行中</a></li>
+                <li><a href="#ago" data-toggle="tab">已结束活动</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="now">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th class="col-md-1">活动名称</th>
+                            <th class="col-md-1">活动时间</th>
+                            <th class="col-md-1">报名时间</th>
+                            <th class="col-md-1">会员类型</th>
+                            <th class="col-md-1">报名情况</th>
+                            <th class="col-md-1">控制</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>【端午节特惠】这些商品平时买不到，端午节打折，速抢</td>
+                            <td>2016-05-05 9:00-00:30~216-06-19 20:00-00:40</td>
+                            <td>2016-05-05 9:00-00:30~216-06-19 20:00-00:40</td>
+                            <td>新会员专享</td>
+                            <td>未报名</td>
+                            <td><a href="activityJianAdd.html" class="common-btn">报名</a></td>
+                        </tr>
+                        <tr>
+                            <td>【端午节特惠】这些商品平时买不到，端午节打折，速抢</td>
+                            <td>2016-05-05 9:00-00:30~216-06-19 20:00-00:40</td>
+                            <td>2016-05-05 9:00-00:30~216-06-19 20:00-00:40</td>
+                            <td>新会员专享</td>
+                            <td>已报名</td>
+                            <td><a href="changeJiangooods.html" class="common-btn">修改商品</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--分页器-->
+                    <div class="fixed">
+                        <div class="list-fenye">
+                            <span>共100</span>
+                            <span><em>1/5</em>页</span>
+                            <ul class="pagination">
+                                <li><a href="#">&laquo;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                            <span>跳转到<input type="text"></span><a href="javascript:;" class="btn btn-primary">确定</a>
+                        </div>
+                    </div>
+                    <!--/分页器-->
+
+                </div>
+                <div class="tab-pane fade" id="loading">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th class="col-md-1">活动名称</th>
+                            <th class="col-md-1">活动时间</th>
+                            <th class="col-md-1">报名时间</th>
+                            <th class="col-md-1">会员类型</th>
+                            <th class="col-md-1">控制</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>【端午节特惠】这些商品平时买不到，端午节打折，速抢</td>
+                            <td>2016-05-05 9:00-00:30~216-06-19 20:00-00:40</td>
+                            <td>2016-05-05 9:00-00:30~216-06-19 20:00-00:40</td>
+                            <td>新会员专享</td>
+                            <td><a href="activityJianGoods.html" class="common-btn">活动商品</a><a href="javascript:;" class="common-btn">导出数据</a></td>
+                        </tr>
+                        <tr>
+                            <td>【端午节特惠】这些商品平时买不到，端午节打折，速抢</td>
+                            <td>2016-05-05 9:00-00:30~216-06-19 20:00-00:40</td>
+                            <td>2016-05-05 9:00-00:30~216-06-19 20:00-00:40</td>
+                            <td>新会员专享</td>
+                            <td><a href="activityJianGoods.html" class="common-btn">活动商品</a><a href="javascript:;" class="common-btn">导出数据</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--分页器-->
+                    <div class="fixed">
+                        <div class="list-fenye">
+                            <span>共100</span>
+                            <span><em>1/5</em>页</span>
+                            <ul class="pagination">
+                                <li><a href="#">&laquo;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                            <span>跳转到<input type="text"></span><a href="javascript:;" class="btn btn-primary">确定</a>
+                        </div>
+                    </div>
+                    <!--/分页器-->
+                </div>
+                <div class="tab-pane fade" id="ago">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th class="col-md-1">活动名称</th>
+                            <th class="col-md-1">活动时间</th>
+                            <th class="col-md-1">报名时间</th>
+                            <th class="col-md-1">会员类型</th>
+                            <th class="col-md-1">控制</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>【端午节特惠】这些商品平时买不到，端午节打折，速抢</td>
+                            <td>2016-05-05 9:00-00:30~216-06-19 20:00-00:40</td>
+                            <td>2016-05-05 9:00-00:30~216-06-19 20:00-00:40</td>
+                            <td>新会员专享</td>
+                            <td><a href="javascript:;">导出数据</a></td>
+                        </tr>
+                        <tr>
+                            <td>【端午节特惠】这些商品平时买不到，端午节打折，速抢</td>
+                            <td>2016-05-05 9:00-00:30~216-06-19 20:00-00:40</td>
+                            <td>2016-05-05 9:00-00:30~216-06-19 20:00-00:40</td>
+                            <td>新会员专享</td>
+                            <td><a href="javascript:;">导出数据</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--分页器-->
+                    <div class="fixed">
+                        <div class="list-fenye">
+                            <span>共100</span>
+                            <span><em>1/5</em>页</span>
+                            <ul class="pagination">
+                                <li><a href="#">&laquo;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                            <span>跳转到<input type="text"></span><a href="javascript:;" class="btn btn-primary">确定</a>
+                        </div>
+                    </div>
+                    <!--/分页器-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--/满赠活动-->
+</body>
+</html>

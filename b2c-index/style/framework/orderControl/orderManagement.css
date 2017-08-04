@@ -1,0 +1,13 @@
+
+.coupon {
+	width: auto;
+	height: auto;
+	min-width: 1100px;
+	margin: 0 20px;
+}
+
+/*订单查询*/
+.coupon-search .form-inline{ margin-top: 20px}
+/*订单列表*/
+.coupon-list{ margin-top: 20px}
+

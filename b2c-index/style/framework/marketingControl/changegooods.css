@@ -1,0 +1,10 @@
+/*单品促销-修改商品*/
+.changeGoods{  width: auto; height: auto; margin:20px}
+.form-inline a{ margin-right: 20px}
+.GradeCondition{ float: left; width: auto;margin-right: 10px; line-height: 20px}
+.GradeCondition span {
+    float: left;
+    margin: 0 5px;
+}
+.Location{ float: left; position: relative;}
+.changeGoods table{ margin-top: 20px}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>营销管理-满减活动-活动报名</title>
+    <link href="../../style/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../style/common.css" rel="stylesheet" type="text/css">
+    <link href="../../style/framework/marketingControl/activityJianAdd.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<!--活动报名-->
+<div class="common-view">
+    <!--标题-->
+    <p class="common-title">营销管理<span>&gt;</span>满减活动<span>&gt;</span>活动报名</p>
+
+    <!--主体内容-->
+    <div class="common-total">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <span class="col-sm-3 control-label">商品设置：</span>
+                <div class="col-md-9  form-search" >
+                    <div class="col-md-4" style="padding-left: 0">
+                        <input type="text" class="form-control">
+                    </div>
+                    <a class="btn btn-primary search-btn">确定</a>
+                </div>
+            </div>
+            <div class="form-group limit">
+                <span class="col-sm-3 control-label">活动限制：</span>
+                <div class="input-group col-sm-2">
+                    <label class="checkbox-inline"><input type="checkbox" class="checkBox"><span
+                            class="input-group-addon">活动期间内会员只参加一次</span></label>
+                </div>
+            </div>
+            <div class="form-group">
+                <span class="col-sm-3 control-label">活动规则：</span>
+                <div class="input-group col-sm-5">
+                    <label class="radio-inline">
+                        <input type="radio" value="0" name="infoGendere" class="raDio coupon-reduce">满减
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" value="1" name="infoGendere" class="raDio coupon-every-reduce">每满减
+                    </label>
+                </div>
+            </div>
+            <div class="form-group reduce">
+                <span class="control-label"></span>
+                <div class="input-group">
+                    <span class="input-group-addon">满</span><input type="text" class="form-control"><span
+                        class="input-group-addon">减</span><input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group every-reduce">
+                <span class="control-label"></span>
+                <div class="input-group">
+                    <span class="input-group-addon">每满</span><input type="text" class="form-control"><span
+                        class="input-group-addon">减</span><input type="text" class="form-control">
+                </div>
+            </div>
+            <a href="javscript:;" class="submit">提交</a>
+        </div>
+    </div>
+
+
+    <!-- 添加模态框（Modal） -->
+    <div class="modal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-labelledby="ModalAddgoods"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="ModalAddgoods">添加商品</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-1 control-label"></label>
+                            <div class="col-md-9">
+                                <div class="GradeCondition">
+                                    <input type="checkbox" class="Location unit"><span>新会员专享</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-1 control-label"></label>
+                            <div class="col-md-9">
+                                <div class="GradeCondition">
+                                    <input type="checkbox" class="Location unit"><span>新会员专享</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-1 control-label"></label>
+                            <div class="col-md-9">
+                                <div class="GradeCondition">
+                                    <input type="checkbox" class="Location unit"><span>新会员专享</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-1 control-label"></label>
+                            <div class="col-md-9">
+                                <div class="GradeCondition">
+                                    <input type="checkbox" class="Location unit"><span>新会员专享</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-1 control-label"></label>
+                            <div class="col-md-9">
+                                <div class="GradeCondition">
+                                    <input type="checkbox" class="Location unit"><span>新会员专享</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-1 control-label"></label>
+                            <div class="col-md-9">
+                                <div class="GradeCondition">
+                                    <input type="checkbox" class="Location total"><span>全选</span>
+                                </div>
+                                <div class="btn btn-primary delete">删除</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">确定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <!-- 添加模态框（Modal） -->
+
+</div>
+<!--活动报名-->
+
+</body>
+<script src="../../scripts/jquery.min.js"></script>
+<script src="../../scripts/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //        商品设置
+        $('.search-btn').click(function () {
+            var INPUT = $(this).parents('.form-group').find('input').val();
+            if(INPUT == ""){
+                return false;
+            }
+            else {
+                $('#myModalAdd').modal('show');
+            }
+        });
+
+        $('.coupon-reduce').click(function () {
+            $('.reduce').show();
+            $('.every-reduce').hide();
+        });
+        $('.coupon-every-reduce').click(function () {
+            $('.reduce').hide();
+            $('.every-reduce').show();
+        });
+
+        //     筛选商品 全部选中
+        $('.total').click(function () {
+            if($(this).is(':checked')){
+                $(this).attr('value','0');
+                $('.unit').prop('checked', true).attr('value','0');
+            }else {
+                $(this).attr('value','1');
+                $('.unit').prop('checked', false).attr('value','1');
+            }
+        });
+//单个选中
+        $('.unit').click(function () {
+            if($(this).is(':checked')){
+                $(this).prop('checked', true).attr('value','0');
+            }else {
+                $('.total').prop('checked', false).attr('value','1');
+                $(this).prop('checked', false).attr('value','1');
+            }
+        });
+
+        //      全部商品全部选中
+        $('.total-location').click(function () {
+            if($(this).is(':checked')){
+                $(this).attr('value','0');
+                $('.unit-location').prop('checked', true).attr('value','0');
+            }else {
+                $(this).attr('value','1');
+                $('.unit-location').prop('checked', false).attr('value','1');
+            }
+        });
+//单个选中
+        $('.unit-location').click(function () {
+            if($(this).is(':checked')){
+                $(this).prop('checked', true).attr('value','0');
+            }else {
+                $('.total-location').prop('checked', false).attr('value','1');
+                $(this).prop('checked', false).attr('value','1');
+            }
+        });
+
+    });
+</script>
+</html>

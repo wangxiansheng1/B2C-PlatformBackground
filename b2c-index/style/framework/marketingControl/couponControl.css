@@ -1,0 +1,15 @@
+.couponControl{ width: auto; height: auto; min-width: 1100px; margin: 0 20px}
+
+/*券码管理*/
+.couponControl-item-total{ width: 100%; height: auto; padding-top: 20px}
+.couponControl-item-total .item-total{ margin-left: 40px; display: inline-block}
+.couponControl-item-total .item-total span{ display: block; text-align: center; line-height: 26px}
+.couponControl-item-total a{  width: 120px; height: 30px; text-align: center;text-decoration: none; margin-left: 40px; line-height: 30px; border-radius: 4px; background: #5bc0de; color: #ffffff; display: inline-block; position: relative; top: -10px }
+.couponControl-item-total a:hover{ background: #31b0d5}
+
+/*券码查询*/
+.couponCtrol-search-list{ width: 100%; height: auto; padding: 10px 0 0 0}
+/*券码列表*/
+.couponControl-list table{ margin: 10px 0}
+.couponControl-list table thead tr th{ font-weight: bold}
+.couponControl-list table thead tr th,.couponControl-list table tbody tr td{text-align: center; padding: 10px 0}

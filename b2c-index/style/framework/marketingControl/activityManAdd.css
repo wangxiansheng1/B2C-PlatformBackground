@@ -1,0 +1,28 @@
+.checkBoxs{ margin-left: -5px !important; }
+/*bootstrap默认样式修改*/
+.input-group-addon{ border: 0 !important; background: #ffffff !important;}
+.limit .checkbox-inline{ padding-top: 0 !important}
+.GradeCondition{ float: left; width: auto; margin-right: 10px}
+.GradeCondition span {
+    float: left;
+    margin: 0 10px;
+}
+.Location{ float: left}
+.form-group{ margin-top: 20px}
+.control-label{ width: 120px; float: left; padding-right: 0 !important;}
+/*添加商品*/
+.search-list{ margin-bottom: 10px}
+.search-list ul li{ padding: 2px 20px}
+.search-list ul li label{ font-weight: 100;line-height: 18px}
+.search-list ul li input{ margin: 0 20px }
+.total-search{  margin-left: 20px}
+.total-search input{ margin-right: 20px}
+.group-choose{ line-height: 18px}
+.raDio{ top: 6px !important;}
+.input-group{ line-height: 30px}
+.checkBox{ top: 3px}
+.boxs{ top: 5px}
+.Location{ position: relative; top: -4px}
+.input-group-addon, .input-group-btn{ width: 0}
+.submit{ margin-left: 45px}
+.delete{ position: relative; top: -8px}

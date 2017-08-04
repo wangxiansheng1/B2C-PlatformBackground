@@ -1,0 +1,12 @@
+.area{ width: auto; height: auto; margin: 0 20px; min-width: 1100px}
+.area .area-title{ margin-top: 10px; font-size: 16px}
+.area .area-city{ margin-left: 40px; margin-top: 15px}
+.area .area-city .area-master{ width: 60px; height: auto ;margin-right: 20px; font-size: 14px; float: left}
+.area .area-city .area-branch{ color: #666666; float: left; margin-top: 3px; width: calc(100% - 120px)}
+.area .area-city .area-branch label{ margin-right: 20px; display: inline-block; margin-bottom: 10px;font-weight: normal}
+.checkBox{ margin: 0 10px !important; top: -1px !important;}
+.checkBoxs{ width: 14px; height: 14px; vertical-align: text-bottom; margin-right: 10px!important; position: relative; top: -1px}
+.area .area-total{ font-size: 14px; margin-left: 40px; margin-top: 20px}
+
+/*提交btn*/
+.submit{ margin-top: 30px; margin-left: 40px}

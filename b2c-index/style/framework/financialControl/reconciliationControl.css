@@ -1,0 +1,8 @@
+/*iframe宽度限制*/
+.reconControl{ width: auto; height: auto; min-width: 1100px; margin: 0 20px}
+
+.reconControl-search .form-group{ margin-top: 10px}
+
+/*表单*/
+.reconControl-list{ width: auto; height: auto; margin-top: 20px}
+.reconControl-list table{ width: 100%; height: auto; min-width: 1100px}

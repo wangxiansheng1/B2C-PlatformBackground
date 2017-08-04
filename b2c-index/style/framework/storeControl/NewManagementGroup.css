@@ -1,0 +1,89 @@
+.common-little-title {
+  	font-size: 14px;
+  	line-height: 50px;
+  	min-width: 1100px;
+  	width: 100%;
+  	height: auto;
+  	color: #323232;
+  	background: #f5f5f5;
+  	padding-left: 20px;
+  }
+  .common-little-title span{ color: #999999; margin: 0 8px}
+  .header_title {
+  	height: 60px;
+  	min-width: 590px;
+  	line-height: 60px;
+  	font-size: 15px;
+  	border-bottom: 1px solid #E0E0E0;
+  	margin: 0 20px;
+  	box-sizing: border-box
+  }
+
+  .header_title span {
+  	float: left;
+  }
+
+  .header_title input {
+  	width: 150px !important;
+  	height: 35px;
+  	margin-top: 12px;
+  	margin-left: 10px;
+  	line-height: 35px;
+  	padding-left: 10px;
+  	box-sizing: border-box;
+  	float: left;
+  	/*防止浏览器版本过低*/
+  	-moz-border-radius: 4px;
+  	-webkit-border-radius: 4px;
+  	border-radius: 4px;
+  }
+
+  #wrappen {
+  	min-width: 1100px;
+  	margin: 20px;
+  }
+  
+  #wrappen .counent {
+  	width: 100%;
+  	float: left;
+  	color: #000;
+  	padding-bottom: 10px;
+  	box-sizing: border-box;
+  }
+  
+  #wrappen .counent .checkbox_ClassA_lists {
+  	width: 92.5%;
+  	margin-left: 7.5%;
+  	margin-top: 10px;
+  	box-sizing: border-box
+  }
+  
+  #wrappen .counent .checkbox_ClassA_lists li {
+  	width: 100%;
+  	height: 40px;
+  	line-height: 40px;
+  	float: left;
+  	border: 1px solid #8C8C8C;
+  	border-bottom: 0;
+  	box-sizing: border-box
+  }
+  
+  #wrappen .counent .checkbox_ClassA_lists li .checkbox_ClassB_lists {
+  	float: left;
+  	margin-left: 10px;
+  	box-sizing: border-box
+  }
+  
+  #wrappen .counent .checkbox_ClassA_lists li .checkbox_ClassC_lists {
+  	float: left;
+  	margin-left: 40px;
+  	color: #555;
+  	box-sizing: border-box
+  }
+  /**/
+  #wrappen .counent .checkbox_ClassA_lists .last_lists {
+  	border-bottom: 1px solid #8C8C8C;
+  	box-sizing: border-box
+  }
+/*bootstrap样式修改*/
+.btn-primary{ position: relative; top: -4px}

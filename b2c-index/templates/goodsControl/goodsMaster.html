@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品管理-商品管理</title>
+    <link href="../../style/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../style/common.css" rel="stylesheet" type="text/css">
+    <link href="../../style/framework/goodsControl/goodsMaster.css" rel="stylesheet" type="text/css">
+    <script src="../../scripts/jquery.min.js"></script>
+    <script src="../../scripts/bootstrap.min.js"></script>
+</head>
+<body>
+<!--商品管理-->
+<div class="common-view">
+    <!--标题-->
+    <p class="common-title">商品管理<span>&gt;</span>商品管理</p>
+    <!--主体内容-->
+
+    <div class="common-total">
+        <!--商品查询-->
+        <div class="common-search">
+            <p class="common-little-title">商品列表</p>
+            <div class="common-search-item">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">商品名称</span><input type="text" class="form-control"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">商品货号</span><input type="text" class="form-control"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">所属分类</span>
+                            <select class="form-control">
+                                <option value="0" selected>微信</option>
+                                <option value="1">银联在线</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">供应商</span><input type="text" class="form-control"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">商品状态</span>
+                            <select class="form-control">
+                                <option value="0" selected>暂存</option>
+                                <option value="1">待审核</option>
+                                <option value="2">待上架</option>
+                                <option value="3">出售中</option>
+                                <option value="4">已下架</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group"><a href="javascript:;" class="btn btn-primary">查询</a></div>
+                </div>
+                <div class="data-reset"><a href="addGoods.html" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;新增商品</a><a href="javascript:;" class="btn btn-info"  data-toggle="modal" data-target="#shelves" ><span class="glyphicon glyphicon-circle-arrow-up" ></span>&nbsp;&nbsp;上架</a><a href="javascript:;" class="btn btn-info" data-toggle="modal" data-target="#downShelves" ><span class="glyphicon glyphicon-circle-arrow-down"  ></span>&nbsp;&nbsp;下架</a><a href="javascript:;" class="btn btn-info" ><span class="glyphicon glyphicon-download-alt"></span>&nbsp;&nbsp;导出</a></div>
+            </div>
+        </div>
+
+
+        <!--活动列表-->
+        <div class="common-list">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#reconList" data-toggle="tab">商品列表</a></li>
+                <li><a href="#reconAdjust" data-toggle="tab">被处理商品</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="reconList">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th class="col-md-1"><input type="checkbox" class="checkBox"></th>
+                            <th class="col-md-2">商品名称</th>
+                            <th class="col-md-1">销售价</th>
+                            <th class="col-md-1">税费</th>
+                            <th class="col-md-1">库存</th>
+                            <th class="col-md-1">所属分类</th>
+                            <th class="col-md-1">商品状态</th>
+                            <th class="col-md-2">控制</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th><input type="checkbox" class="checkBox"></th>
+                            <td>乐虎自营双十一主会场卡卢浮宫哪来的手机打开零售价啊</td>
+                            <td>￥56.8</td>
+                            <td>￥12.5</td>
+                            <td>113</td>
+                            <td>3C>数码>手机</td>
+                            <td>暂存</td>
+                            <td><a href="viewVerchandise.html" class="common-btn">查看</a><a href="addGoodsDetail.html" class="common-btn">编辑</a></td>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox" class="checkBox"></th>
+                            <td>乐虎自营双十一主会场卡卢浮宫哪来的手机打开零售价啊</td>
+                            <td>￥56.8</td>
+                            <td>￥12.5</td>
+                            <td>113</td>
+                            <td>3C>数码>手机</td>
+                            <td>待审核</td>
+                            <td><a href="viewVerchandise.html" class="common-btn">查看</a><a href="addGoodsDetail.html" class="common-btn">编辑</a></td>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox" class="checkBox"></th>
+                            <td>乐虎自营双十一主会场卡卢浮宫哪来的手机打开零售价啊</td>
+                            <td>￥56.8</td>
+                            <td>￥12.5</td>
+                            <td>113</td>
+                            <td>3C>数码>手机</td>
+                            <td>待上架</td>
+                            <td><a href="viewVerchandise.html" class="common-btn">查看</a><a href="addGoodsDetail.html" class="common-btn">编辑</a><a data-toggle="modal" data-target="#delete" href="javascript:;" class="common-btn">删除</a><a  data-toggle="modal" data-target="#shelves"  href="javascript:;" class="common-btn">上架</a></td>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox" class="checkBox"></th>
+                            <td>乐虎自营双十一主会场卡卢浮宫哪来的手机打开零售价啊</td>
+                            <td>￥56.8</td>
+                            <td>￥12.5</td>
+                            <td>113</td>
+                            <td>3C>数码>手机</td>
+                            <td>出售中</td>
+                            <td><a href="viewVerchandise.html" class="common-btn">查看</a><a href="addGoodsDetail.html" class="common-btn">编辑</a><a data-toggle="modal" data-target="#delete" href="javascript:;" class="common-btn">删除</a><a  data-toggle="modal" data-target="#downShelves"  href="javascript:;" class="common-btn">下架</a></td>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox" class="checkBox"></th>
+                            <td>乐虎自营双十一主会场卡卢浮宫哪来的手机打开零售价啊</td>
+                            <td>￥56.8</td>
+                            <td>￥12.5</td>
+                            <td>113</td>
+                            <td>3C>数码>手机</td>
+                            <td>已下架</td>
+                            <td><a href="viewVerchandise.html" class="common-btn">查看</a><a href="addGoodsDetail.html" class="common-btn">编辑</a><a data-toggle="modal" data-target="#delete" href="javascript:;" class="common-btn">删除</a><a  data-toggle="modal" data-target="#shelves"  href="javascript:;" class="common-btn">上架</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <!--分页器-->
+                    <div class="fixed">
+                        <div class="list-fenye">
+                            <span>共100</span>
+                            <span><em>1/5</em>页</span>
+                            <ul class="pagination">
+                                <li><a href="#">&laquo;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                            <span>跳转到<input type="text"></span><a href="javascript:;" class="btn btn-primary">确定</a>
+                        </div>
+                    </div>
+                    <!--/分页器-->
+
+                </div>
+                <div class="tab-pane fade" id="reconAdjust">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th class="col-md-1"><input type="checkbox" class="checkBox"></th>
+                            <th class="col-md-2">商品名称</th>
+                            <th class="col-md-1">销售价</th>
+                            <th class="col-md-1">税费</th>
+                            <th class="col-md-1">库存</th>
+                            <th class="col-md-1">所属分类</th>
+                            <th class="col-md-1">商品状态</th>
+                            <th class="col-md-2">控制</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th><input type="checkbox" class="checkBox"></th>
+                            <td>乐虎自营双十一主会场卡卢浮宫哪来的手机打开零售价啊</td>
+                            <td>￥56.8</td>
+                            <td>￥12.5</td>
+                            <td>113</td>
+                            <td>3C>数码>手机</td>
+                            <td>处理商品</td>
+                            <td><a href="viewVerchandise.html" class="common-btn">查看</a><a data-toggle="modal" data-target="#delete" href="javascript:;" class="common-btn">删除</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--分页器-->
+                    <div class="fixed">
+                        <div class="list-fenye">
+                            <span>共100</span>
+                            <span><em>1/5</em>页</span>
+                            <ul class="pagination">
+                                <li><a href="#">&laquo;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                            <span>跳转到<input type="text"></span><a href="javascript:;" class="btn btn-primary">确定</a>
+                        </div>
+                    </div>
+                    <!--/分页器-->
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--删除模态框（Modal） -->
+    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="LoginLogLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="DeleteLabel">是否删除</h4>
+                </div>
+                <!--<div class="modal-body">-->
+
+                <!--</div>-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary modal-btn-primary">确认</button>
+                    <button type="button" class="btn btn-default modal-btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <!--删除模态框（Modal） -->
+
+    <!--上架模态框（Modal） -->
+    <div class="modal fade" id="shelves" tabindex="-1" role="dialog" aria-labelledby="LoginLogLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="shelvesLabel">是否上架</h4>
+                </div>
+                <!--<div class="modal-body">-->
+
+                <!--</div>-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary modal-btn-primary">确认</button>
+                    <button type="button" class="btn btn-default modal-btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <!--上架模态框（Modal） -->
+
+    <!--下架模态框（Modal） -->
+    <div class="modal fade" id="downShelves" tabindex="-1" role="dialog" aria-labelledby="LoginLogLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="downShelvesLabel">是否下架</h4>
+                </div>
+                <!--<div class="modal-body">-->
+
+                <!--</div>-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary modal-btn-primary">确认</button>
+                    <button type="button" class="btn btn-default modal-btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <!--下架模态框（Modal） -->
+
+</div>
+
+<!--/商品管理-->
+</body>
+</html>

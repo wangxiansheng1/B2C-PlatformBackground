@@ -1,0 +1,8 @@
+
+/*活动查询*/
+.coupon-submit{ padding-bottom:20px}
+.coupon-submit a{width: 80px; height: 30px; display: inline-block; text-align: center;text-decoration: none; line-height: 30px; border-radius: 4px; background: #3cc0b6; color: #ffffff; margin-left: 20px}
+.coupon-submit a:hover{text-decoration: none; background: #1d9188}
+.inputTitle{ width: 100%}
+/*表单*/
+.coupon-list table{ width: 100%; height: auto; min-width: 1100px}

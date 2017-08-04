@@ -1,0 +1,27 @@
+.storeMessage{ width: auto; height: auto;  min-width: 1100px; margin: 20px}
+.storeMessage-total{ width: 540px; height: auto; float: left}
+.storeMessage-total p{ margin-bottom: 23px}
+.message-normal{ width: 180px; height: 30px; text-align: right; line-height: 30px; font-weight: 600; display: inline-block ; margin-right: 20px; font-size: 14px}
+.message-title{ width: auto; height: 30px; text-align: left; line-height:30px;font-size: 14px}
+
+/*证件*/
+.storeMessage-card{ float: right; width:calc(100% - 620px); height: auto; margin-left: 80px}
+.card-certificate{ width: 100%; height: 260px; }
+.company-pic{ margin-left:20px; margin-top: 20px }
+.pic-total{ margin-left: 20px; margin-top: 80px}
+.company-pic span,.pic-total span{ width: 240px; height: auto; text-align: right; display: inline-block; margin-right: 20px; font-weight: bolder}
+.company-pic img,.pic-total img{ width: 100px; height: auto}
+
+/*运营/申请新增*/
+.add-operating tr th,.add-operating tr td{text-align: center; padding: 10px 0}
+.add-new-leimu,.add-new-shenhe{margin-left: 20px; margin-top: 20px}
+.form-group{ display: block !important;}
+.form-group p{ margin: 16px 0; padding-left: 20px}
+.form-group .form-group-list{ text-align: center}
+.form-group .form-group-list span{ text-align: center;  height: 30px; display: inline-block; line-height: 30px}
+.add-new-leimu a,.add-new-shenhe a{ width: 78px; height: 24px; display: inline-block; line-height: 26px; text-align: center; text-decoration: none; border: 1px solid #999999}
+
+/*确定btn*/
+.store-submit{ width: 100%; height: auto ;margin: 20px auto; text-align: center}
+.store-submit a{width: 220px; height: 40px; line-height: 40px;background: #5bc0de; display: inline-block; color: #ffffff; border-radius: 4px; -webkit-border-radius: 4px ; -moz-border-radius: 4px}
+.store-submit a:hover{background: #31b0d5; text-decoration: none}

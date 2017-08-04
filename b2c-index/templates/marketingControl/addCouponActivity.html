@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>营销管理-优惠券-新增活动</title>
+    <link href="../../style/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../style/common.css" rel="stylesheet" type="text/css">
+    <link href="../../style/laydate.css" rel="stylesheet" type="text/css">
+    <link href="../../style/laytime.css" rel="stylesheet" type="text/css">
+    <link href="../../style/framework/marketingControl/addCouponActivity.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--新增活动-->
+<div class="common-view">
+    <!--标题-->
+    <p class="common-title">营销管理<span>&gt;</span>优惠券优惠<span>&gt;</span>优惠券设置</p>
+
+    <!--主体内容-->
+    <div class="addCoupon">
+        <!--设置-->
+       <div class="form-horizontal">
+           <div class="form-group">
+               <span class="control-label col-sm-3">优惠券名称：</span>
+               <div class="input-group col-sm-4">
+                   <input type="text" class="form-control">
+               </div>
+           </div>
+           <div class="form-group">
+               <span class="control-label col-sm-3">优惠券名称：</span>
+               <div class="input-group col-sm-4">
+                   <input type="text" class="form-control"><span class="input-group-addon">张</span>
+               </div>
+           </div>
+           <div class="form-group">
+               <span class="col-sm-3 control-label">适用范围：</span>
+               <div class="col-sm-5">
+                   <!--<label class="radio-inline">-->
+                       <!--<input type="radio" value="0" name="infoGendere" class="raDio search-coupon" data-toggle="modal"-->
+                              <!--data-target="#myModalAdd">筛选商品-->
+                   <!--</label>-->
+                   <label class="radio-inline">
+                       <input type="radio" value="1" name="infoGendere" class="raDio total-coupon" data-toggle="modal"
+                              data-target="#addmyModalAdd">全场商品
+                   </label>
+               </div>
+           </div>
+           <div class="form-group">
+               <span class="control-label col-sm-3">领券时间：</span>
+               <div class="input-group col-sm-7">
+                   <input type="text" class="form-control" id="beginTime" readonly><span class="input-group-addon">至</span><input type="text" class="form-control" id="endTime" readonly>
+               </div>
+           </div>
+           <div class="form-group">
+               <span class="control-label col-sm-3">用券时间：</span>
+               <div class="input-group col-sm-7">
+                   <input type="text" class="form-control" id="CbeginTime" readonly><span class="input-group-addon">至</span><input type="text" class="form-control" id="CendTime" readonly>
+               </div>
+           </div>
+           <div class="form-group">
+               <span class="col-sm-3 control-label">优惠券类型：</span>
+               <div class="col-sm-5">
+                   <label class="radio-inline">
+                       <input type="radio" value="0" name="infoGender" checked="checked" class="raDio radio-search">现金券
+                   </label>
+                   <label class="radio-inline">
+                       <input type="radio" value="1" name="infoGender" class="raDio radio-total">满减券
+                   </label>
+               </div>
+           </div>
+           <div class="form-group coupon-youhui">
+               <span class="control-label col-sm-3"></span>
+               <div class="input-group col-sm-4">
+                   <span class="input-group-addon">优惠金额：</span><input type="text" class="form-control"><span class="input-group-addon">元</span>
+               </div>
+           </div>
+           <div class="form-group coupon-jian">
+               <span class="control-label col-sm-3">满减券设置：</span>
+               <div class="input-group col-sm-4">
+                   <span class="input-group-addon">满</span><input type="text" class="form-control"><span class="input-group-addon">减</span><input type="text" class="form-control">
+               </div>
+           </div>
+           <div class="form-group">
+               <span class="col-sm-3 control-label">是否公用券：</span>
+               <div class="col-sm-5">
+                   <label class="radio-inline">
+                       <input type="radio" value="0" name="infoGenderq"  class="raDio checkyes">是
+                   </label>
+                   <label class="radio-inline">
+                       <input type="radio" value="1" name="infoGenderq" class="raDio checkno">否
+                   </label>
+               </div>
+           </div>
+           <div class="form-group">
+               <span class="col-sm-3 control-label">发放方式：</span>
+               <div class="col-sm-8">
+                   <label class="radio-inline">
+                       <input type="radio" value="0" name="infoGenders" class="raDio raDio-test test">系统推送
+                   </label>
+                   <label class="radio-inline">
+                       <input type="radio" value="1" name="infoGenders" class="raDio raDio-test">券码发放
+                   </label>
+                   <label class="radio-inline">
+                       <input type="radio" value="2" name="infoGenders" class="raDio raDio-test test sales-promotion">随促销发放
+                   </label><label class="radio-inline">
+                   <input type="radio" value="3" name="infoGenders" class="raDio raDio-test test">链接发放
+               </label>
+               </div>
+           </div>
+           <div class="form-group" id="get-way">
+               <span class="col-sm-3 control-label">领取方式：</span>
+               <div class="col-sm-8">
+                   <label class="radio-inline">
+                       <input type="radio" value="0" name="infoGendersp" checked="checked" class="raDio">活动期间内只能领一张
+                   </label>
+                   <label class="radio-inline">
+                       <input type="radio" value="1" name="infoGendersp" class="raDio">活动期间每天领取一张
+                   </label>
+               </label>
+               </div>
+           </div>
+           <div class="form-group" id="join-members">
+               <span class="col-sm-3 control-label">参与会员类型：</span>
+               <div class="col-sm-5">
+                   <label class="radio-inline">
+                       <input type="radio" value="0" name="infoGendert" checked="checked"  class="raDio radio-members">老会员专享
+                   </label>
+                   <label class="radio-inline">
+                       <input type="radio" value="1" name="infoGendert" class="raDio radio-members-new">新会员专享
+                   </label>
+               </div>
+           </div>
+           <div class="form-group member-level">
+               <span class="control-label col-sm-3">会员等级：</span>
+               <div class="input-group col-sm-3">
+                   <select class="form-control">
+                       <option value="0" selected>普通会员</option>
+                       <option value="1">黄金会员</option>
+                       <option value="2">VIP会员</option>
+                   </select>
+               </div>
+           </div>
+           <div class="form-group">
+               <a href="javascript:;" class="submit">提交</a>
+           </div>
+
+       </div>
+
+    </div>
+
+    <!--&lt;!&ndash; 筛选模态框（Modal） &ndash;&gt;-->
+    <!--<div class="modal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-labelledby="ModalAddgoods"-->
+         <!--aria-hidden="true">-->
+        <!--<div class="modal-dialog">-->
+            <!--<div class="modal-content">-->
+                <!--<div class="modal-header">-->
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
+                    <!--<h4 class="modal-title" id="ModalAddgoods">筛选商品</h4>-->
+                <!--</div>-->
+                <!--<div class="modal-body">-->
+                    <!--<div class="form-horizontal">-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-2 control-label">搜索:</label>-->
+                            <!--<div class="col-md-9  form-search">-->
+                                <!--<div class="col-md-8" style="padding-left: 0">-->
+                                    <!--<input type="text" class="form-control" placeholder="输入商品ID，多个以“;”分隔">-->
+                                <!--</div>-->
+                                <!--<a class="btn btn-primary">确定</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-2 control-label"></label>-->
+                            <!--<div class="col-md-9">-->
+                                <!--<div class="GradeCondition">-->
+                                    <!--<input type="checkbox" class="Location unit"><span>吕臻参葆凝时焕活护发乳400ML</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-2 control-label"></label>-->
+                            <!--<div class="col-md-9">-->
+                                <!--<div class="GradeCondition">-->
+                                    <!--<input type="checkbox" class="Location unit"><span>吕臻参葆凝时焕活护发乳400ML</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-2 control-label"></label>-->
+                            <!--<div class="col-md-9">-->
+                                <!--<div class="GradeCondition">-->
+                                    <!--<input type="checkbox" class="Location unit"><span>吕臻参葆凝时焕活护发乳400ML</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-2 control-label"></label>-->
+                            <!--<div class="col-md-9">-->
+                                <!--<div class="GradeCondition">-->
+                                    <!--<input type="checkbox" class="Location unit"><span>吕臻参葆凝时焕活护发乳400ML</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-2 control-label"></label>-->
+                            <!--<div class="col-md-9">-->
+                                <!--<div class="GradeCondition">-->
+                                    <!--<input type="checkbox" class="Location unit"><span>吕臻参葆凝时焕活护发乳400ML</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-2 control-label"></label>-->
+                            <!--<div class="col-md-9">-->
+                                <!--<div class="GradeCondition">-->
+                                    <!--<input type="checkbox" class="Location total"><span>全选</span>-->
+                                <!--</div>-->
+                                <!--<div class="btn btn-primary delete">删除</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="btn btn-primary">确定</button>-->
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>-->
+                <!--</div>-->
+            <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+        <!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
+    <!--</div>-->
+    <!--&lt;!&ndash; 筛选模态框（Modal） &ndash;&gt;-->
+
+    <!--&lt;!&ndash; 添加黑名单模态框（Modal） &ndash;&gt;-->
+    <!--<div class="modal fade" id="addmyModalAdd" tabindex="-1" role="dialog" aria-labelledby="ModalAddgoods"-->
+         <!--aria-hidden="true">-->
+        <!--<div class="modal-dialog">-->
+            <!--<div class="modal-content">-->
+                <!--<div class="modal-header">-->
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
+                    <!--<h4 class="modal-title" id="addModalAddgoods">设置黑名单</h4>-->
+                <!--</div>-->
+                <!--<div class="modal-body">-->
+                    <!--<div class="form-horizontal">-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-2 control-label">搜索:</label>-->
+                            <!--<div class="col-md-9  form-search">-->
+                                <!--<div class="col-md-8" style="padding-left: 0">-->
+                                    <!--<input type="text" class="form-control" placeholder="输入商品ID，多个以“;”分隔">-->
+                                <!--</div>-->
+                                <!--<a class="btn btn-primary">确定</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-2 control-label"></label>-->
+                            <!--<div class="col-md-9">-->
+                                <!--<div class="GradeCondition">-->
+                                    <!--<input type="checkbox" class="Location unit-location"><span>吕臻参葆凝时焕活护发乳400ML</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-2 control-label"></label>-->
+                            <!--<div class="col-md-9">-->
+                                <!--<div class="GradeCondition">-->
+                                    <!--<input type="checkbox" class="Location unit-location"><span>吕臻参葆凝时焕活护发乳400ML</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-2 control-label"></label>-->
+                            <!--<div class="col-md-9">-->
+                                <!--<div class="GradeCondition">-->
+                                    <!--<input type="checkbox" class="Location unit-location"><span>吕臻参葆凝时焕活护发乳400ML</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-2 control-label"></label>-->
+                            <!--<div class="col-md-9">-->
+                                <!--<div class="GradeCondition">-->
+                                    <!--<input type="checkbox" class="Location unit-location"><span>吕臻参葆凝时焕活护发乳400ML</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-2 control-label"></label>-->
+                            <!--<div class="col-md-9">-->
+                                <!--<div class="GradeCondition">-->
+                                    <!--<input type="checkbox" class="Location unit-location"><span>吕臻参葆凝时焕活护发乳400ML</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-2 control-label"></label>-->
+                            <!--<div class="col-md-9">-->
+                                <!--<div class="GradeCondition">-->
+                                    <!--<input type="checkbox" class="Location total-location"><span>全选</span>-->
+                                <!--</div>-->
+                                <!--<div class="btn btn-primary delete">删除</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="btn btn-primary">确定</button>-->
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>-->
+                <!--</div>-->
+            <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+        <!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
+    <!--</div>-->
+    <!--&lt;!&ndash; 添加黑名单模态框（Modal） &ndash;&gt;-->
+
+</div>
+<!--/新增活动-->
+</body>
+<script src="../../scripts/jquery.min.js"></script>
+<script src="../../scripts/bootstrap.min.js"></script>
+<script src="../../scripts/laydate.js"></script>
+<script src="../../scripts/common.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.search-coupon').click(function(){
+            $('.search-choose').show();
+            $('.total-choose').hide();
+        });
+        $('.total-coupon').click(function(){
+            $('.search-choose').hide();
+            $('.total-choose').show();
+        });
+        $('.radio-search').click(function(){
+            $('.coupon-jian').hide();
+            $('.coupon-youhui').show();
+        });
+        $('.radio-total').click(function(){
+            $('.coupon-youhui').hide();
+            $('.coupon-jian').show();
+        });
+        $('.radio-members').click(function(){
+            $('.member-level').show();
+        });
+        $('.radio-members-new').click(function(){
+            $('.member-level').hide();
+        });
+
+        //      全部选中
+        $('.total').click(function () {
+            if($(this).is(':checked')){
+                $(this).attr('value','0');
+                $('.unit').prop('checked', true).attr('value','0');
+            }else {
+                $(this).attr('value','1');
+                $('.unit').prop('checked', false).attr('value','1');
+            }
+        });
+//单个选中
+        $('.unit').click(function () {
+            if($(this).is(':checked')){
+                $(this).prop('checked', true).attr('value','0');
+            }else {
+                $('.total').prop('checked', false).attr('value','1');
+                $(this).prop('checked', false).attr('value','1');
+            }
+        });
+        //      弹出框全部选中
+        $('.total-location').click(function () {
+            if($(this).is(':checked')){
+                $(this).attr('value','0');
+                $('.unit-location').prop('checked', true).attr('value','0');
+            }else {
+                $(this).attr('value','1');
+                $('.unit-location').prop('checked', false).attr('value','1');
+            }
+        });
+//单个选中
+        $('.unit-location').click(function () {
+            if($(this).is(':checked')){
+                $(this).prop('checked', true).attr('value','0');
+            }else {
+                $('.total-location').prop('checked', false).attr('value','1');
+                $(this).prop('checked', false).attr('value','1');
+            }
+        });
+        
+//        是否公用券
+        $('.checkyes').click(function () {
+            $('.test').attr('disabled',true);
+        });
+        $('.checkno').click(function () {
+            $('.raDio-test').attr('disabled',false);
+        });
+
+
+        $('.raDio-test').click(function () {
+            if($(this).hasClass('sales-promotion')){
+                $('#get-way').hide();
+                $('#join-members').hide();
+            }
+            else {
+                $('#get-way').show();
+                $('#join-members').show();
+            }
+        })
+
+    });
+</script>
+</html>

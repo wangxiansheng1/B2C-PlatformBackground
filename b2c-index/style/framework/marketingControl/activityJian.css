@@ -1,0 +1,31 @@
+/*满减活动*/
+.activityMan-total{ margin-top: 10px}
+
+.activityMan table a{  color: #02bffe; padding: 0 10px}
+.activityMan table a:hover{  color: #02A8E0}
+
+
+.checkBox{ margin-left: -20px !important; margin-top: 8px !important;}
+/*bootstrap默认样式修改*/
+.input-group-addon{ border: 0 !important; background: #ffffff !important;}
+.limit .checkbox-inline{ padding-top: 0 !important}
+.limit .input-group-addon{ padding-left: 0 !important}
+.reset{ padding-left: 0 !important;}
+.raDio{ top: 4px}
+.every-reduce{ display: none}
+.form-search .form-control{ width: 80% !important; height: auto; float: left; margin-right: 10px}
+.GradeCondition{ float: left; width: auto; margin-right: 10px}
+.GradeCondition span {
+    float: left;
+    margin: 0 10px;
+}
+.Location{ float: left}
+/*添加商品*/
+.search-list{ margin-bottom: 10px}
+.search-list ul li{ padding: 8px 20px}
+.search-list ul li label{ font-weight: 100 }
+.search-list ul li input{ margin: 0 20px }
+.add-goods{ padding: 20px 100px !important;}
+.checkBox{ top: -1px}
+.boxs{ top: -8px}
+.Location{ position: relative; top: -4px}

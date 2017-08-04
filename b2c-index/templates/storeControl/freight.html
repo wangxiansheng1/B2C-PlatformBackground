@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运费模板-新增运费模板</title>
+    <link href="../../style/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../style/common.css" rel="stylesheet" type="text/css">
+    <link href="../../style/framework/storeControl/freight.css" rel="stylesheet" type="text/css">
+    <script src="../../scripts/jquery.min.js"></script>
+    <script src="../../scripts/bootstrap.min.js"></script>
+</head>
+<body>
+<!--运费模板-->
+<div class="common-view">
+    <!--标题-->
+    <p class="common-title">店铺管理<span>&gt;</span>运费模板</p>
+
+    <!--主体内容-->
+    <div class="freight">
+
+        <!--新增模板-->
+        <div class="attributeControl-search">
+            <div class="data-reset"><a href="javascript:;" class="btn btn-info add-btn add-list-freight"
+                                       data-toggle="modal"
+                                       data-target="#myModal"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;新增运费模板</a><a
+                    data-toggle="modal" data-target="#delete" href="javascript:;" class="btn btn-info"><span
+                    class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;删除</a>
+            </div>
+        </div>
+
+        <!--列表-->
+        <div class="freight-list">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th class="col-md-1"><input type="checkbox" class="checkBox"></th>
+                    <th class="col-md-1">模板名称</th>
+                    <th class="col-md-4">模板规则</th>
+                    <th class="col-md-1">模板添加时间</th>
+                    <th class="col-md-2">控制</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th><input type="checkbox" class="checkBox"></th>
+                    <td>日本小物流</td>
+                    <td>
+                        <div class="col-sm-4">
+                            <span>默认</span><span>首重<em>12元/3kg</em></span><span>续重<em>3元/2kg</em>（满足199元包邮）</span></div>
+                        <div class="col-sm-4"><span>江苏、浙江、上海、浙江、上海</span><span>首重<em>12元/3kg</em></span><span>续重<em>3元/2kg</em>（满足199元包邮）</span>
+                        </div>
+                    </td>
+                    <td>2017.01.01</td>
+                    <td><a data-toggle="modal"
+                           data-target="#restore" href="javascript:;" class="common-btn">默认</a><a href="javascript:;"
+                                                                                                  class="common-btn"
+                                                                                                  data-toggle="modal"
+                                                                                                  data-target="#changeModal">修改</a><a
+                            data-toggle="modal"
+                            data-target="#delete"
+                            href="javascript:;"
+                            class="common-btn">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" class="checkBox"></th>
+                    <td>日本小物流</td>
+                    <td>
+                        <div class="col-sm-4"><span>默认</span><span>首重<em>12元/3kg</em></span><span>续重<em>3元/2kg</em>（满足199元包邮）</span></div>
+                        <div class="col-sm-4"><span>江苏、浙江、上海、浙江、上海</span><span>首重<em>12元/3kg</em></span><span>续重<em>3元/2kg</em>（满足199元包邮）</span>
+                        </div>
+                    </td>
+                    <td>2017.01.01</td>
+                    <td><a  href="javascript:;" class="common-delete">已默认</a><a
+                            href="javascript:;" class="common-btn" data-toggle="modal"
+                            data-target="#changeModal">修改</a><a data-toggle="modal"
+                                                            data-target="#delete"
+                                                            href="javascript:;"
+                                                            class="common-btn">删除</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--分页器-->
+        <div class="fixed">
+            <div class="list-fenye">
+                <span>共100</span>
+                <span><em>1/5</em>页</span>
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+                <span>跳转到<input type="text"></span><a href="javascript:;" class="btn btn-primary">确定</a>
+            </div>
+        </div>
+        <!--/分页器-->
+    </div>
+
+    <!-- 新增运费模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">新增运费模板</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" id="form1">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">模板名称</label>
+                            <div class="col-md-5">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">模板类型</label>
+                            <div class="col-sm-5">
+                                <label class="radio-inline">
+                                    <input type="radio" value="0" name="infoGender" checked="checked"
+                                           class="raDio addFreight-number">按件数
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" value="1" name="infoGender" class="raDio addFreight-weight">按重量
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group addFreight-list-number">
+                            <label class="col-md-2 control-label">默认运费</label>
+                            <div class="col-sm-10">
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control"><span
+                                            class="input-group-addon">件内</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">运费</span><input type="text"
+                                                                                        class="form-control"><span
+                                            class="input-group-addon">元，</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">每增加</span><input type="text"
+                                                                                         class="form-control"><span
+                                            class="input-group-addon">件，</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">增加</span><input type="text"
+                                                                                        class="form-control"><span
+                                            class="input-group-addon">元，</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">满足</span><input type="text"
+                                                                                        class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 form-fle">
+                                    <div class="input-group">
+                                        <select class="form-control">
+                                            <option value="0" selected>件数</option>
+                                            <option value="1">金额</option>
+                                        </select>
+                                        <span class="input-group-addon">包邮</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <a href="javascript:;" class="btn btn-info addNumber-tianjia">指定特殊区域</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group addFreight-list-weight">
+                            <label class="col-md-2 control-label">默认运费</label>
+                            <div class="col-sm-10">
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control"><span
+                                            class="input-group-addon">KG内</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">运费</span><input type="text"
+                                                                                        class="form-control"><span
+                                            class="input-group-addon">元，</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">每增加</span><input type="text"
+                                                                                         class="form-control"><span
+                                            class="input-group-addon">KG，</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">增加</span><input type="text"
+                                                                                        class="form-control"><span
+                                            class="input-group-addon">元，</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">满足</span><input type="text"
+                                                                                        class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 form-fle">
+                                    <div class="input-group">
+                                        <select class="form-control">
+                                            <option value="0" selected>件数</option>
+                                            <option value="1">金额</option>
+                                        </select>
+                                        <span class="input-group-addon">包邮</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <a href="javascript:;" class="btn btn-info addWeight-tianjia">指定特殊区域</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-freight">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">确认</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <!-- 新增运费模态框（Modal） -->
+
+    <!-- 修改运费模态框（Modal） -->
+    <div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="changeLabel">修改运费模板</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">模板名称</label>
+                            <div class="col-md-5">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">模板类型</label>
+                            <div class="col-sm-5">
+                                <label class="radio-inline">
+                                    <input type="radio" value="0" name="infoGender" checked="checked"
+                                           class="raDio addFreight-number">按件数
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" value="1" name="infoGender" class="raDio addFreight-weight">按重量
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group addFreight-list-number">
+                            <label class="col-md-2 control-label">默认运费</label>
+                            <div class="col-sm-10">
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control"><span
+                                            class="input-group-addon">件内</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">运费</span><input type="text"
+                                                                                        class="form-control"><span
+                                            class="input-group-addon">元，</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">每增加</span><input type="text"
+                                                                                         class="form-control"><span
+                                            class="input-group-addon">件，</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">增加</span><input type="text"
+                                                                                        class="form-control"><span
+                                            class="input-group-addon">元，</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">满足</span><input type="text"
+                                                                                        class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 form-fle">
+                                    <div class="input-group">
+                                        <select class="form-control">
+                                            <option value="0" selected>件数</option>
+                                            <option value="1">金额</option>
+                                        </select>
+                                        <span class="input-group-addon">包邮</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <a href="javascript:;" class="btn btn-info addNumber-tianjia">指定特殊区域</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group addFreight-list-weight">
+                            <label class="col-md-2 control-label">默认运费</label>
+                            <div class="col-sm-10">
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control"><span
+                                            class="input-group-addon">KG内</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">运费</span><input type="text"
+                                                                                        class="form-control"><span
+                                            class="input-group-addon">元，</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">每增加</span><input type="text"
+                                                                                         class="form-control"><span
+                                            class="input-group-addon">KG，</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">增加</span><input type="text"
+                                                                                        class="form-control"><span
+                                            class="input-group-addon">元，</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">满足</span><input type="text"
+                                                                                        class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 form-fle">
+                                    <div class="input-group">
+                                        <select class="form-control">
+                                            <option value="0" selected>件数</option>
+                                            <option value="1">金额</option>
+                                        </select>
+                                        <span class="input-group-addon">包邮</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 form-fle">
+                                    <a href="javascript:;" class="btn btn-info addWeight-tianjia">指定特殊区域</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-freight">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">确认</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <!-- 修改运费模态框（Modal） -->
+
+    <!--删除模态框（Modal） -->
+    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="LoginLogLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="DeleteLabel">是否删除</h4>
+                </div>
+                <!--<div class="modal-body">-->
+
+                <!--</div>-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary modal-btn-primary">确认</button>
+                    <button type="button" class="btn btn-default modal-btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <!--删除模态框（Modal） -->
+
+    <!--恢复模态框（Modal） -->
+    <div class="modal fade" id="restore" tabindex="-1" role="dialog" aria-labelledby="LoginLogLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="restoreLabel">设为默认</h4>
+                </div>
+                <!--<div class="modal-body">-->
+
+                <!--</div>-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary modal-btn-primary">确认</button>
+                    <button type="button" class="btn btn-default modal-btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <!--恢复模态框（Modal） -->
+
+    <!-- 地址模态框（Modal） -->
+    <div class="modal fade" id="AreaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg" id="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="AreaLabel">选择区域</h4>
+                </div>
+                <div class="modal-body">
+                    <!--地址城市-->
+                    <table class="area">
+                        <tbody>
+                        <tr>
+                            <td class="col-md-2"><label><input type="checkbox" class="total-checkbox">北京</label></td>
+                            <td class="col-md-10"><label><input type="checkbox" class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" class="total-checkbox">北京</label></td>
+                            <td><label><input type="checkbox" class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" class="total-checkbox">北京</label></td>
+                            <td><label><input type="checkbox" class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" class="total-checkbox">北京</label></td>
+                            <td><label><input type="checkbox" class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" class="total-checkbox">北京</label></td>
+                            <td><label><input type="checkbox" class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" class="total-checkbox">北京</label></td>
+                            <td><label><input type="checkbox" class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" class="total-checkbox">北京</label></td>
+                            <td><label><input type="checkbox" class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" class="total-checkbox">北京</label></td>
+                            <td><label><input type="checkbox" class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" class="total-checkbox">北京</label></td>
+                            <td><label><input type="checkbox" class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" class="total-checkbox">北京</label></td>
+                            <td><label><input type="checkbox" class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" class="total-checkbox">北京</label></td>
+                            <td><label><input type="checkbox" class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" class="total-checkbox">北京</label></td>
+                            <td><label><input type="checkbox" class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" class="total-checkbox">北京</label></td>
+                            <td><label><input type="checkbox" class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label> <label><input type="checkbox"
+                                                                                                         class="checkBox">三里屯</label>
+                                <label><input type="checkbox" class="checkBox">三里屯</label></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary total-chose">全选</button>
+                    <button type="button" class="btn btn-primary total-nochose">全不选</button>
+                    <button type="button" class="btn btn-primary total-submit" data-dismiss="modal">提交</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <!-- 地址模态框（Modal） -->
+
+</div>
+<!--/运费模板-->
+</body>
+<script type="text/javascript">
+    $(function () {
+
+//        新增运费模板切换
+        $('.addFreight-number').click(function () {
+            $('.addFreight-list-number').show();
+            $('.addFreight-list-weight').hide();
+            $('.add-freight').empty();
+        });
+
+        $('.addFreight-weight').click(function () {
+            $('.addFreight-list-number').hide();
+            $('.addFreight-list-weight').show();
+            $('.add-freight').empty();
+        });
+
+//        删除add-freight里的所有Html
+        $('.add-btn').click(function () {
+            $('.add-freight').empty();
+        });
+
+        var Number = 0;
+//          件数添加
+        $('.addNumber-tianjia').click(function () {
+
+            Number++;
+            var html = '<div class="form-group addNumber-list-add"><a  data-toggle="modal" data-target="#AreaModal" class="col-md-2 control-label EditingArea" id="mess" data-tags="' + Number + '">编辑区域</a><div class="col-sm-10"><div class="col-sm-4 form-fle"><div class="input-group"><input type="text" class="form-control"><span class="input-group-addon">件内</span></div></div><div class="col-sm-4 form-fle"><div class="input-group"><span class="input-group-addon">运费</span><input type="text" class="form-control"><span class="input-group-addon">元，</span></div></div><div class="col-sm-4 form-fle"><div class="input-group"><span class="input-group-addon">每增加</span><input type="text" class="form-control"><span class="input-group-addon">件，</span></div></div><div class="col-sm-4 form-fle"><div class="input-group"><span class="input-group-addon">增加</span><input type="text" class="form-control"><span class="input-group-addon">元，</span></div></div><div class="col-sm-4 form-fle"><div class="input-group"><span class="input-group-addon">满足</span><input type="text" class="form-control"></div></div><div class="col-sm-3 form-fle"><div class="input-group"><select class="form-control"><option value="0" selected>件数</option><option value="1">金额</option></select><span class="input-group-addon">包邮</span></div></div><div class="btn btn-primary">-</div></div></div>';
+            $('.add-freight').append(html);
+        });
+
+//          KG添加
+        $('.addWeight-tianjia').click(function () {
+
+            var html = '<div class="form-group addWeight-list-add"><a  data-toggle="modal" data-target="#AreaModal" class="col-md-2 control-label EditingArea">编辑区域</a><div class="col-sm-10"><div class="col-sm-4 form-fle"><div class="input-group"><input type="text" class="form-control"><span class="input-group-addon">KG内</span></div></div><div class="col-sm-4 form-fle"><div class="input-group"><span class="input-group-addon">运费</span><input type="text" class="form-control"><span class="input-group-addon">元，</span></div></div><div class="col-sm-4 form-fle"><div class="input-group"><span class="input-group-addon">每增加</span><input type="text" class="form-control"><span class="input-group-addon">KG，</span></div></div><div class="col-sm-4 form-fle"><div class="input-group"><span class="input-group-addon">增加</span><input type="text" class="form-control"><span class="input-group-addon">元，</span></div></div><div class="col-sm-4 form-fle"><div class="input-group"><span class="input-group-addon">满足</span><input type="text" class="form-control"></div></div><div class="col-sm-3 form-fle"><div class="input-group"><select class="form-control"><option value="0" selected>件数</option><option value="1">金额</option></select><span class="input-group-addon">包邮</span></div></div><div class="btn btn-primary">-</div></div></div>';
+            $('.add-freight').append(html);
+        });
+
+//        地域选择清空属性
+        $('.add-list-freight').click(function () {
+
+            $(".area input[type='checkbox']").removeAttr('value');
+            $(".area input[type='checkbox']").prop('checked', false);
+
+        });
+
+//        地区选择选择清空
+        $('.add-freight').delegate('.EditingArea', 'click', function () {
+            var Number = $(this).attr('data-tags');
+            $('.area').attr('data-tag', Number);
+            $(".area input[type='checkbox']").prop('checked', false);
+            var Length = $(".area input[type='checkbox']").length;
+            for (var i = 0; i < Length; i++) {
+                if ($(".area input[type='checkbox']").eq(i).attr('number')) {
+                    if ($(".area input[type='checkbox']").eq(i).attr('number') == Number) {
+                        if ($(".area input[type='checkbox']").eq(i).attr('value') == 0) {
+                            $(".area input[type='checkbox']").eq(i).attr("disabled", false);
+                            $(".area input[type='checkbox']").eq(i).prop('checked', true);
+                            console.log(2);
+                        }
+                    }
+                    else {
+                        $(".area input[type='checkbox']").eq(i).attr("disabled", true);
+                        console.log(2);
+                    }
+                }
+            }
+        });
+
+//        地区选择
+        $('.total-checkbox').click(function () {
+            if ($(this).is(':checked')) {
+                for(var i =0; i< $(this).parents('tr').find('.checkBox').length; i++){
+                    if($(this).parents('tr').find('.checkBox').eq(i).attr("disabled")){
+                        $(this).parents('tr').find('.checkBox').eq(i).prop('checked', true);
+                    }
+                }
+            }
+            else {
+                for(var i =0; i< $(this).parents('tr').find('.checkBox').length; i++){
+                    if($(this).parents('tr').find('.checkBox').eq(i).attr("disabled")){
+                        $(this).parents('tr').find('.checkBox').eq(i).prop('checked', false);
+                    }
+                }
+            }
+        });
+
+////        单个地区选择
+//        $('.checkBox').click(function () {
+//            if($(this).is(':checked')){
+//                $(this).prop('checked',false);
+//            }
+//            else {
+//                $(this).prop('checked',true);
+//            }
+//        });
+
+//        全选
+        $('.total-chose').click(function () {
+            var Length = $(".area input[type='checkbox']").length;
+            for (var i = 0; i < Length; i++) {
+                if ($(".area input[type='checkbox']").eq(i).attr('disabled')) {
+                    $(".area input[type='checkbox']").eq(i).prop('checked', false);
+                }
+                else {
+                    $(".area input[type='checkbox']").eq(i).prop('checked', true);
+                }
+            }
+        });
+
+//       全不选
+        $('.total-nochose').click(function () {
+            $(".area input[type='checkbox']").prop('checked', false);
+        });
+
+//        选择城市,城市disabled
+        $('.total-submit').click(function () {
+            var Number = $('.area').attr('data-tag');
+            var Length = $(".area input[type='checkbox']").length;
+
+            for (var j = 0; j < Length; j++) {
+                if ($(".area input[type='checkbox']").eq(j).attr('number')) {
+                    if ($(".area input[type='checkbox']").eq(j).attr('number') == Number) {
+                        $(".area input[type='checkbox']").eq(j).removeAttr('number');
+                        $(".area input[type='checkbox']").eq(j).removeAttr('value');
+                        console.log(4);
+                    }
+                }
+            }
+
+            for (var i = 0; i < Length; i++) {
+                if ($(".area input[type='checkbox']").eq(i).is(':checked')) {
+                    $(".area input[type='checkbox']").eq(i).attr('value', '0');
+                    $(".area input[type='checkbox']").eq(i).attr('number', Number);
+                }
+            }
+
+        });
+
+        $('#myModal').on('show.bs.modal', function () {
+            document.getElementById("form1").reset();
+        })
+    });
+</script>
+</html>

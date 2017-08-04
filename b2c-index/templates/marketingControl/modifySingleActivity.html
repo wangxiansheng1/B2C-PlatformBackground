@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>营销管理-单品促销-活动报名</title>
+    <link href="../../style/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../style/common.css" rel="stylesheet" type="text/css">
+    <link href="../../style/framework/marketingControl/modifySingleActivity.css" rel="stylesheet" type="text/css">
+    <script src="../../scripts/jquery.min.js"></script>
+</head>
+<body>
+<!--单品促销活动报名-->
+<div class="common-view">
+    <!--标题-->
+    <p class="common-title">修改商品</p>
+
+    <!--主体内容-->
+    <div class="common-total">
+        <!--添加商品-->
+        <div class="singleActivity-add">
+            <div class="add-item">
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th class="col-md-1"><input type="checkbox" class="checkBox total"></th>
+                        <th class="col-md-2">商品名称</th>
+                        <th class="col-md-1">库存量</th>
+                        <th class="col-md-1">活动数量</th>
+                        <th class="col-md-1">售价</th>
+                        <th class="col-md-1">促销价</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="checkBox unit"></td>
+                        <td>是吧结晶爽肤水150ml</td>
+                        <td>89</td>
+                        <td><input type="text" class="common-value"></td>
+                        <td>12.5</td>
+                        <td><input type="text" class="common-value"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkBox unit"></td>
+                        <td>是吧结晶爽肤水150ml</td>
+                        <td>89</td>
+                        <td><input type="text" class="common-value"></td>
+                        <td>12.5</td>
+                        <td><input type="text" class="common-value"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <a href="javascript:;" class="submit">提交</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!--/单品促销活动报名-->
+</body>
+<script type="text/javascript">
+    $(function () {
+        //      全部选中
+        $('.total').click(function () {
+            if($(this).is(':checked')){
+                $(this).attr('value','0');
+                $('.unit').prop('checked', true).attr('value','0');
+            }else {
+                $(this).attr('value','1');
+                $('.unit').prop('checked', false).attr('value','1');
+            }
+        });
+//单个选中
+        $('.unit').click(function () {
+            if($(this).is(':checked')){
+                $(this).prop('checked', true).attr('value','0');
+            }else {
+                $('.total').prop('checked', false).attr('value','1');
+                $(this).prop('checked', false).attr('value','1');
+            }
+        });
+    })
+</script>
+</html>

@@ -1,0 +1,415 @@
+/*iframe宽度限制*/
+
+.edit {
+    min-width: 1100px;
+    margin: 0 20px;
+    margin-top: 10px;
+}
+
+
+/*基本信息*/
+
+#basic ul li {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#basic>ul>li>label {
+    width: 100%;
+    height: 100%;
+}
+
+label {
+    font-weight: 500;
+}
+
+#basic>ul>li>label.radioLabel {
+    width: 10%;
+    float: left;
+    margin-top: 8px;
+}
+
+#basic ul li label .Determine {
+    position: relative;
+    top: 0;
+    left: 10px;
+}
+
+.end {
+    width: 6%;
+    height: 100%;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#basic ul li span {
+    width: 10%;
+    height: 35px;
+    line-height: 35px;
+    text-align: right;
+    font-weight: bold;
+    float: left;
+    margin: 0 2%;
+}
+
+#basic ul li input[type="text"] {
+    width: 30%;
+    float: left;
+}
+
+#basic>ul>li>label.radioLabel input.Location {
+    top: 1px !important;
+    left: 2px !important;
+    margin-right: 4px;
+}
+.Location{ top: 2px; position: relative}
+
+#basic ul li select {
+    width: 12%;
+    float: left;
+}
+
+#basic ul li select.Template {
+    float: left;
+    width: 18%;
+    margin-left: 20px;
+}
+
+.pictire-content {
+    float: right;
+    width: 86%;
+    overflow: hidden;
+    zoom: 1;
+}
+
+#basic ul li label .pictire-list {
+    width: 180px;
+    height: 200px;
+    margin-top: 10px;
+    margin-right: 10px;
+    float: left;
+    position: relative;
+}
+
+#basic ul li label .pictire-list span {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #CCCCCC;
+    margin: 0;
+}
+
+#basic ul li label .pictire-list img {
+    width: 100%;
+    height: 100%;
+}
+
+#basic ul li .Memory {
+    width: 60%;
+    float: left;
+    border: 1px solid #E0E0E0;
+    margin-bottom: 20px;
+    overflow: auto;
+    zoom: 1;
+}
+.MemoryLsit{
+    width: 95%;
+    margin: 0 20px;
+    overflow: auto;
+    zoom: 1;
+    border-top: 1px dashed #E0E0E0;
+    box-sizing: border-box;
+}
+#basic ul li .Memory .Memory-title {
+    width: 10%;
+    text-align: center;
+    height: 100%;
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#basic ul li .Memory .Memory-lists {
+    width: 90%;
+    height: 100%;
+    float: right;
+}
+
+#basic ul li .Memory .Memory-lists label {
+    width: 12%;
+    float: left;
+    margin: 5px auto;
+    text-align: center;
+}
+
+#basic ul li .Memory .Memory-lists label>a {
+    float: left;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    padding-bottom: 20px;
+    margin-top: 2px;
+    margin-left: 18px;
+}
+
+/*商品信息*/
+
+.CommodityInformation {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    zoom: 1;
+    margin-top: 10px;
+}
+
+.CommodityInformationLsit {
+    overflow: auto;
+    zoom: 1;
+    border: 1px solid #CCCCCC;}
+
+.CommodityInformation .PictureInformation {
+    width: 200px;
+    height: 240px;
+    float: left;
+}
+
+.CommodityInformation .PictureInformation p {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+}
+
+.CommodityInformation .PictureInformation dl {
+    width: 150px;
+    height: 200px;
+    float: left;
+    margin: 10px 25px;
+    border: 1px solid #E0E0E0;
+    margin-bottom: 0;
+}
+
+.CommodityInformation .PictureInformation dl dt {
+    width: 130px;
+    height: 130px;
+    margin: 10px;
+    position: relative;
+}
+
+.CommodityInformation .PictureInformation dl dt span {
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #CCCCCC;
+    cursor: pointer;
+}
+
+.CommodityInformation .PictureInformation dl dd {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.CommodityInformation .PictureInformation dl dt img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*选择栏*/
+
+.CommodityInformation .SelectColumn {
+    width: calc(100% - 200px);
+    height: auto;
+    float: left;
+    margin-top: 30px;
+}
+
+
+
+/*商品详情*/
+
+#details .CommodityDetails {
+    width: 100%;
+    border: 1px solid #E0E0E0;
+    margin-top: 10px;
+}
+
+#details .CommodityDetails .CommodityDetails-title {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+#details .CommodityDetails .CommodityDetails-content {
+    width: 100%;
+    height: 270px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    resize: none;
+}
+
+.store-submit .CommodityDetails-Submit {
+    width: 80px;
+}
+
+
+/*新增图片弹窗*/
+
+.pictire {
+    width: 850px;
+}
+
+#editingPicture .tab-content {
+    height: 600px;
+    overflow: auto;
+}
+
+#On-line p {
+    position: relative;
+}
+
+#On-line p input {
+    width: 100px;
+    height: 35px;
+    line-height: 17px;
+}
+
+#On-line p input[type="button"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#On-line p input[type="file"] {
+    z-index: 99;
+    filter: alpha(Opacity=0);
+    -moz-opacity: 0;
+    opacity: 0;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.SeleclPicture {
+    width: 100%;
+    height: 35px;
+    margin: 20px 0;
+}
+
+.SeleclPicture span,
+.SeleclPicture select,
+.SeleclPicture input[type="button"] {
+    float: left;
+    height: 35px;
+}
+
+.SeleclPicture span,
+.SeleclPicture select {
+    line-height: 35px;
+}
+
+.SeleclPicture span {
+    width: 80px;
+    text-align: center;
+}
+
+.SeleclPicture select {
+    width: 200px;
+}
+
+.SeleclPicture input[type="button"] {
+    line-height: 17px;
+    margin-left: 20px;
+}
+
+.NetworkPicturePath {
+    width: 100%;
+    height: 35px;
+    margin: 20px 0;
+}
+
+.NetworkPicturePath span,
+.NetworkPicturePath input {
+    float: left;
+    height: 35px;
+}
+
+.NetworkPicturePath span {
+    width: 120px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.NetworkPicturePath input {
+    width: 400px;
+}
+
+
+/*图片*/
+
+.PictureList>li {
+    float: left;
+    width: 200px;
+    height: 230px;
+}
+
+.PictureList>li {
+    width: 200px;
+    height: 230px;
+    position: relative;
+    cursor: pointer;
+}
+.PictureList li span{
+    display: none;
+}
+.PictureList li span img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #2446AB;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.btn_list {
+    margin: 10px;
+}
+.btn_list a {
+    margin-left: 20px;
+}
+/*提交按钮*/
+
+.store-submit{text-align: center; margin: 20px 0 40px 0}
+.store-submit a {
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    background: #5bc0de;
+    display: inline-block;
+    color: #ffffff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    text-decoration: none;
+    padding: 0 10px;
+
+}
+
+.store-submit .onSubmit {
+    margin-left: 20px;
+}

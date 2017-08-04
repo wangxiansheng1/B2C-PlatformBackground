@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>营销管理-单品促销-活动报名</title>
+    <link href="../../style/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../style/common.css" rel="stylesheet" type="text/css">
+    <link href="../../style/framework/marketingControl/singleactivity.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<!--单品促销活动报名-->
+<div class="common-view">
+    <!--标题-->
+    <p class="common-title">营销管理<span>&gt;</span>单品促销<span>&gt;</span>活动报名</p>
+
+    <!--主体内容-->
+    <div class="singleActivity">
+        <!--商品提交-->
+        <div class="singleActivity-sign">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <span class="control-label">参与商品导入</span>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control form-search">
+                    </div>
+                    <a href="javascript:;" class="btn btn-primary submit-search">确定</a>
+                </div>
+                <div class="form-group">
+                    <span class="control-label">商品限购</span>
+                    <div class="control-check">
+                        <label class="checkbox-inline"><input type="checkbox" class="checkBox">开启限购</label>
+                    </div>
+                    <div class="input-group" style="float: left; width: 120px"><input type="text" class="form-control"> <span class="input-group-addon">件/人</span></div>
+                </div>
+                <div class="form-group"><a href="javascript:;" class="btn btn-info">提交</a></div>
+            </div>
+        </div>
+
+
+        <!--添加模态框（Modal） -->
+        <div class="modal fade" id="addStore" tabindex="-1" role="dialog" aria-labelledby="LoginLogLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="addStoreLabel">添加商品</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="add-item">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                <tr>
+                                    <th class="col-md-1"><input type="checkbox" class="checkBox total"></th>
+                                    <th class="col-md-2">商品名称</th>
+                                    <th class="col-md-1">库存量</th>
+                                    <th class="col-md-1">活动数量</th>
+                                    <th class="col-md-1">售价</th>
+                                    <th class="col-md-1">促销价</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="checkBox unit"></td>
+                                    <td>是吧结晶爽肤水150ml</td>
+                                    <td>89</td>
+                                    <td><input type="text" class="common-value"></td>
+                                    <td class="sale-value">12.5</td>
+                                    <td><input type="text" class="common-value promotion"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkBox unit"></td>
+                                    <td>是吧结晶爽肤水150ml</td>
+                                    <td>89</td>
+                                    <td><input type="text" class="common-value"></td>
+                                    <td class="sale-value">18.59</td>
+                                    <td><input type="text" class="common-value promotion"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="singleActivity-add">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <a href="javascript:;" class="btn btn-primary common-tec">删除</a>
+                                    <a href="javascript:;" class="btn btn-primary common-tec" data-toggle="modal"
+                                       data-target="#AddMerchandisePictures">添加</a>
+                                    <div class="col-sm-3 input-group common-tec"><span class="input-group-addon">一键设置减</span><input type="text" class="form-control reduce-dollor"><span class="input-group-addon">元</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary modal-btn-primary">确认</button>
+                        <button type="button" class="btn btn-default modal-btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal -->
+        </div>
+        <!--添加模态框（Modal） -->
+
+        <!--新增商品模态框（Modal） -->
+        <div class="modal fade" id="AddMerchandisePictures" tabindex="-1" role="dialog" aria-labelledby="AddMerchandisePicturesLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="AddMerchandisePicturesLabel">选择商品</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-horizontal">
+                            <div class="CommentsList">
+                                <div class="comments-search">
+                                    <div class="comments-search-item">
+                                        <div class="form-inline">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">商品名称</span>
+                                                    <input class="form-control" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">商品货号</span>
+                                                    <input class="form-control" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <a href="javascript:;" class="btn btn-primary">查询</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comments-list">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade in active">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th class="col-md-1"><input type="checkbox" name="b" class="checkBox total-location" /></th>
+                                                    <th class="col-md-1">序号</th>
+                                                    <th class="col-md-2">图片</th>
+                                                    <th class="col-md-2">货品编号</th>
+                                                    <th class="col-md-3">货品名称</th>
+                                                    <th class="col-md-2">优惠价</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th><input type="checkbox" name="b" class="checkBox unit-location" /></th>
+                                                    <td>1</td>
+                                                    <td><img src="../../images/activity221_10(2).jpg" /></td>
+                                                    <td>201608261352091</td>
+                                                    <td>惠普（HP） HP ...</td>
+                                                    <td>849.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><input type="checkbox" name="b" class="checkBox unit-location" /></th>
+                                                    <td>2</td>
+                                                    <td><img src="../../images/activity221_10(2).jpg" /></td>
+                                                    <td>201608261352091</td>
+                                                    <td>惠普（HP） HP ...</td>
+                                                    <td>849.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><input type="checkbox" name="b"  class="checkBox unit-location"/></th>
+                                                    <td>3</td>
+                                                    <td><img src="../../images/activity221_10(2).jpg" /></td>
+                                                    <td>201608261352091</td>
+                                                    <td>惠普（HP） HP ...</td>
+                                                    <td>849.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><input type="checkbox" name="b" class="checkBox unit-location" /></th>
+                                                    <td>4</td>
+                                                    <td><img src="../../images/activity221_10(2).jpg" /></td>
+                                                    <td>201608261352091</td>
+                                                    <td>惠普（HP） HP ...</td>
+                                                    <td>849.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><input type="checkbox" name="b" class="checkBox unit-location" /></th>
+                                                    <td>5</td>
+                                                    <td><img src="../../images/activity221_10(2).jpg" /></td>
+                                                    <td>201608261352091</td>
+                                                    <td>惠普（HP） HP ...</td>
+                                                    <td>849.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><input type="checkbox" name="b" class="checkBox unit-location" /></th>
+                                                    <td>6</td>
+                                                    <td><img src="../../images/activity221_10(2).jpg" /></td>
+                                                    <td>201608261352091</td>
+                                                    <td>惠普（HP） HP ...</td>
+                                                    <td>849.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><input type="checkbox" name="b" class="checkBox unit-location" /></th>
+                                                    <td>7</td>
+                                                    <td><img src="../../images/activity221_10(2).jpg" /></td>
+                                                    <td>201608261352091</td>
+                                                    <td>惠普（HP） HP ...</td>
+                                                    <td>849.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><input type="checkbox" name="b" class="checkBox unit-location" /></th>
+                                                    <td>8</td>
+                                                    <td><img src="../../images/activity221_10(2).jpg" /></td>
+                                                    <td>201608261352091</td>
+                                                    <td>惠普（HP） HP ...</td>
+                                                    <td>849.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><input type="checkbox" name="b"  class="checkBox unit-location"/></th>
+                                                    <td>9</td>
+                                                    <td><img src="../../images/activity221_10(2).jpg" /></td>
+                                                    <td>201608261352091</td>
+                                                    <td>惠普（HP） HP ...</td>
+                                                    <td>849.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><input type="checkbox" name="b" class="checkBox unit-location" /></th>
+                                                    <td>10</td>
+                                                    <td><img src="../../images/activity221_10(2).jpg" /></td>
+                                                    <td>201608261352091</td>
+                                                    <td>惠普（HP） HP ...</td>
+                                                    <td>849.00</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--分页器-->
+                                    <div class="fixed">
+                                        <div class="list-fenye">
+                                            <span>共100</span>
+                                            <span><em>1/5</em>页</span>
+                                            <ul class="pagination">
+                                                <li>
+                                                    <a href="#">&laquo;</a>
+                                                </li>
+                                                <li class="active">
+                                                    <a href="#">1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">5</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">&raquo;</a>
+                                                </li>
+                                            </ul>
+                                            <span>跳转到<input type="text"></span>
+                                            <a href="javascript:;" class="btn btn-primary">确定</a>
+                                        </div>
+                                    </div>
+                                    <!--/分页器-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">提交</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal -->
+            </div>
+        </div>
+        <!--新增商品模态框（Modal） -->
+
+    </div>
+
+</div>
+<!--/单品促销活动报名-->
+</body>
+<script src="../../scripts/jquery.min.js"></script>
+<script src="../../scripts/common.js"></script>
+<script src="../../scripts/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.submit-search').click(function () {
+            if($('.form-search').val() == ""){
+                Until("输入框不能为空!");
+            }
+            else {
+                $(this).attr({'data-toggle':'modal','data-target':'#addStore'});
+          }
+        })
+
+        $(function () {
+//      全部选中
+            $('.total').click(function () {
+                if($(this).is(':checked')){
+                    $(this).attr('value','0');
+                    $('.unit').prop('checked', true).attr('value','0');
+                }else {
+                    $(this).attr('value','1');
+                    $('.unit').prop('checked', false).attr('value','1');
+                }
+            });
+//单个选中
+            $('.unit').click(function () {
+                if($(this).is(':checked')){
+                    $(this).prop('checked', true).attr('value','0');
+                }else {
+                    $('.total').prop('checked', false).attr('value','1');
+                    $(this).prop('checked', false).attr('value','1');
+                }
+            });
+            //      弹出框全部选中
+            $('.total-location').click(function () {
+                if($(this).is(':checked')){
+                    $(this).attr('value','0');
+                    $('.unit-location').prop('checked', true).attr('value','0');
+                }else {
+                    $(this).attr('value','1');
+                    $('.unit-location').prop('checked', false).attr('value','1');
+                }
+            });
+//单个选中
+            $('.unit-location').click(function () {
+                if($(this).is(':checked')){
+                    $(this).prop('checked', true).attr('value','0');
+                }else {
+                    $('.total-location').prop('checked', false).attr('value','1');
+                    $(this).prop('checked', false).attr('value','1');
+                }
+            });
+        })
+
+//        添加商品一键设置减
+        $('.reduce-dollor').on('blur',function () {
+            var re=/^[0-9]+\.{0,1}[0-9]{0,2}$/;
+            if($(this).val() == ""){
+                return false;
+            }
+            if(!$(this).val().match(re)){
+                alert("输入字符错误！");
+                $(this).val("");
+                return false;
+            }
+            var VALUE = parseFloat($(this).val());
+            var SALELENTGHT = 0;
+            for(var i = 0; i <$('.sale-value').length; i++){
+                SALELENTGHT =  (parseFloat((parseFloat($('.sale-value').eq(i).html())).toFixed(2)) - parseFloat((parseFloat(VALUE)).toFixed(2))).toFixed(2);
+                console.log(SALELENTGHT);
+                if(SALELENTGHT < 0){
+                    alert("一键设置减单价错误");
+                    return false;
+                }
+                $('.promotion').eq(i).val(SALELENTGHT);
+            }
+
+        })
+
+    })
+</script>
+</html>

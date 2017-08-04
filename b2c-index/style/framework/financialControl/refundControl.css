@@ -1,0 +1,6 @@
+/*iframe宽度限制*/
+.refundControl{ width: auto; height: auto; min-width: 1100px; margin: 0 20px}
+.refundControl-search-item .form-inline{ margin-top: 10px}
+
+/*表单*/
+.refundControl-list table{ width: 100%; height: auto; min-width: 1100px}

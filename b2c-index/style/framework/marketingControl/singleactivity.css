@@ -1,0 +1,45 @@
+.singleActivity{ width: auto; height: auto; min-width: 1100px !important; margin: 0 20px}
+
+.singleActivity-add table thead tr th,.singleActivity-add table tbody tr td{ vertical-align: middle!important; text-align: center}
+
+/*bootstrap默认样式修改*/
+.singleActivity-sign .form-horizontal{ margin-top: 20px !important;}
+.control-label{ width: 100px; float: left}
+.checkbox-inline{ margin-top: 3px!important;}
+.checkbox-inline .checkBox{ top: 3px}
+.singleActivity-sign .btn-info{ margin-left: 20px; padding: 6px 40px}
+.control-check{ width: 100px; float: left; margin-left: 20px}
+.singleActivity-add .form-horizontal{ margin-left: 20px; margin-top: 20px}
+.common-tec{ float: left!important; margin-left: 20px}
+.singleActivity-add  .btn-info{padding: 6px 40px}
+
+
+.col-sm-1,.col-sm-2{ padding-right: 0 !important; margin-right: 10px}
+.form-horizontal .CommentsList{ height: 500px; overflow-y: auto}
+
+/*新增商品图片*/
+
+#AddMerchandisePictures {
+    z-index: 10000;
+}
+
+#AddMerchandisePictures table tr th,
+#AddMerchandisePictures table tr td {
+    color: #000000;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.form-horizontal>.CommentsList {
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.form-horizontal .CommentsList .comments-list {
+    margin-top: 10px;
+}
+table tbody tr td img {
+    width: 80px;
+    height: 34px;
+    margin: 0 auto;
+}

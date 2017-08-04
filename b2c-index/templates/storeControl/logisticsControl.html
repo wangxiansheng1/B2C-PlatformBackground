@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运费模板-物流管理</title>
+    <link href="../../style/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../style/common.css" rel="stylesheet" type="text/css">
+    <link href="../../style/framework/storeControl/logisticsControl.css" rel="stylesheet" type="text/css">
+    <script src="../../scripts/jquery.min.js"></script>
+    <script src="../../scripts/bootstrap.min.js"></script>
+</head>
+<body>
+<!--物流管理-->
+<div class="common-view">
+    <!--标题-->
+    <p class="common-title">店铺管理<span>&gt;</span>物流管理</p>
+
+    <!--主体内容-->
+    <div class="common-total">
+        <!--物流公司查询-->
+        <div class="comments-query">
+            <p class="common-little-title">物流公司列表</p>
+            <div class="common-search-item">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">名称</span><input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">名称缩写</span><input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><a href="javascript:;" class="btn btn-primary">查询</a></div>
+                </form>
+                <div class="data-reset"><a href="javascript:;" class="btn btn-info" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;新增物流</a><a data-toggle="modal" data-target="#delete"  href="javascript:;" class="btn btn-info "><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;删除</a></div>
+                </div>
+            </div>
+
+        <!--会员列表-->
+        <div class="common-list">
+            <div class="comments-list-neirong">
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th class="col-md-1"><input type="checkbox" class="checkBox"></th>
+                        <th class="col-md-1">物流公司名称</th>
+                        <th class="col-md-2">名称缩写</th>
+                        <th class="col-md-2">查询物流地址</th>
+                        <th class="col-md-1">控制</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="checkBox"></td>
+                        <td>顺丰物流</td>
+                        <td>sf</td>
+                        <td>www.sfexpress.com/sf/sfexpress.htm</td>
+                        <td><a data-toggle="modal" data-target="#changeModal" href="javascript:;" class="common-btn">修改</a><a  data-toggle="modal" data-target="#delete" href="javascript:;" class="common-btn">删除</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkBox"></td>
+                        <td>圆通物流</td>
+                        <td>sf</td>
+                        <td>www.sfexpress.com/sf/sfexpress.htm</td>
+                        <td><a data-toggle="modal" data-target="#changeModal" href="javascript:;" class="common-btn">修改</a><a  data-toggle="modal" data-target="#delete" href="javascript:;" class="common-btn">删除</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--分页器-->
+            <div class="fixed">
+                <div class="list-fenye">
+                    <span>共100</span>
+                    <span><em>1/5</em>页</span>
+                    <ul class="pagination">
+                        <li><a href="#">&laquo;</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                    <span>跳转到<input type="text"></span><a href="javascript:;" class="btn btn-primary">确定</a>
+                </div>
+            </div>
+            <!--/分页器-->
+        </div>
+    </div>
+
+    <!-- 新增物流模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">新增物流</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">物流公司名称</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">名称缩写</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">查询物流地址</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">确定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <!-- 新增物流模态框（Modal） -->
+
+    <!-- 修改物流模态框（Modal） -->
+    <div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="changeLabel">修改物流</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">物流公司名称</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">名称缩写</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">查询物流地址</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">确定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <!-- 修改物流模态框（Modal） -->
+
+    <!--删除模态框（Modal） -->
+    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="LoginLogLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="DeleteLabel">是否删除</h4>
+                </div>
+                <!--<div class="modal-body">-->
+
+                <!--</div>-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary modal-btn-primary">确认</button>
+                    <button type="button" class="btn btn-default modal-btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <!--删除模态框（Modal） -->
+
+
+</div>
+<!--/物流管理-->
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>店铺商家管理后台</title>
+    <meta name="description" content="汇银乐虎全球家（www.lehumall.com）汇集全球进口商品、进口零食、进口母婴，进口美妆，买进口商品，何须海外代购。">
+    <meta name="Keywords" content="进口商品,进口食品,进口零食,汇银乐虎,汇银乐虎全球家,乐虎,汇银乐虎,扬州电商,扬州O2O,扬州B2C,扬州B2B2C，江苏汇银电子商务有限公司,智慧社区">
+    <link href="images/Shortcut_114_114.png" rel="apple-touch-icon-precomposed">
+    <link href="images/Shortcut_114_114.png" rel="Shortcut Icon" type="image/x-icon">
+    <link href="style/common.css" rel="stylesheet" type="text/css">
+    <link href="style/index.css" rel="stylesheet" type="text/css">
+    <script src="scripts/jquery.min.js"></script>
+</head>
+<body class="index-back">
+<!--header start-->
+<div class="index-header">
+    <div class="common-image">
+        <img src="images/store.png" class="header-tale">
+    </div>
+       <!--welcome start-->
+    <div class="main-welcome">
+        <div class="main-login">
+            <a href="javascript:;">欢迎<span>strome</span></a>
+            <a href="./templates/resetpassword.html" target="control">修改密码</a>
+            <a href="javascript:;">退出</a>
+        </div>
+    </div>
+    <!--welcome end-->
+</div>
+<!--header end-->
+<!--main strat-->
+<div class="main">
+    <!--layout start-->
+    <div class="layout">
+        <!--nav start-->
+        <div class="layout-nav">
+            <div><a href="templates/welcome.html"  target="control" class="nav-control active">欢迎登录</a></div>
+            <div>
+                <a href="javascript:;" class="nav-control"><img src="images/f.png">店铺管理</a>
+                <ul class="nav-list">
+                    <a href="templates/storeControl/PermissionSetting.html" target="control"><img src="images/jiantou.png"><li>权限设置</li></a>
+                    <a href="templates/storeControl/storemessage.html" target="control"><img src="images/jiantou.png"><li>店铺信息</li></a>
+                    <a href="templates/storeControl/areaControl.html" target="control"><img src="images/jiantou.png"><li>区域管理</li></a>
+                    <a href="templates/storeControl/freight.html" target="control"><img src="images/jiantou.png"><li>运费模板</li></a>
+                    <a href="templates/storeControl/logisticsControl.html" target="control"><img src="images/jiantou.png"><li>物流管理</li></a>
+                    <a href="templates/storeControl/supplierControl.html" target="control"><img src="images/jiantou.png"><li>供应商管理</li></a>
+                    <a href="templates/storeControl/warehouseControl.html" target="control"><img src="images/jiantou.png"><li>仓库管理</li></a>
+                </ul>
+            </div>
+            <div>
+                <a href="javascript:;" class="nav-control"><img src="images/goods.png">商品管理</a>
+                <ul class="nav-list">
+                    <a href="templates/goodsControl/goodsControl.html" target="control"><img src="images/jiantou.png"><li>商品规格</li></a>
+                    <a href="templates/goodsControl/attributeControl.html" target="control"><img src="images/jiantou.png"><li>商品属性</li></a>
+                    <a href="templates/goodsControl/goodsMaster.html"s target="control"><img src="images/jiantou.png"><li>商品管理</li></a>
+                    <a href="templates/goodsControl/comments.html" target="control"><img src="images/jiantou.png"><li>评价管理</li></a>
+                </ul>
+            </div>
+            <div>
+                <a href="javascript:;" class="nav-control"><img src="images/order.png">订单管理</a>
+                <ul class="nav-list">
+                    <a href="templates/orderControl/orderManagement.html" target="control"><img src="images/jiantou.png"><li>订单列表</li></a>
+                    <a href="templates/orderControl/afterSale.html" target="control"><img src="images/jiantou.png"><li>售后管理</li></a>
+                </ul>
+            </div>
+            <div>
+                <a href="javascript:;" class="nav-control"><img src="images/user.png">会员管理</a>
+                <ul class="nav-list">
+                    <a href="templates/membersControl/membersControl.html" target="control" ><img src="images/jiantou.png"><li>会员列表</li></a>
+                </ul>
+            </div>
+            <div>
+                <a href="javascript:;" class="nav-control"><img src="images/caiwu.png">财务管理</a>
+                <ul class="nav-list">
+                    <a href="templates/financialControl/reconciliationControl.html" target="control"><img src="images/jiantou.png"><li>对账管理</li></a>
+                    <a href="templates/financialControl/invoiceControl.html" target="control"><img src="images/jiantou.png"><li>开票管理</li></a>
+                    <!--<a href="templates/financialControl/refundControl.html" target="control"><img src="images/jiantou.png"><li>退款管理</li></a>-->
+                </ul>
+            </div>
+            <div>
+                <a href="javascript:;" class="nav-control"><img src="images/sale.png">营销管理</a>
+                <ul  class="nav-list">
+                    <a href="templates/marketingControl/singlePrice.html" target="control"><img src="images/jiantou.png"><li>单品促销</li></a>
+                    <a href="templates/marketingControl/activityJian.html" target="control"><img src="images/jiantou.png"><li>满减活动</li></a>
+                    <a href="templates/marketingControl/activityMan.html" target="control"><img src="images/jiantou.png"><li>满赠活动</li></a>
+                    <a href="templates/marketingControl/coupon.html" target="control"><img src="images/jiantou.png"><li>优惠券</li></a>
+                </ul>
+            </div>
+        </div>
+        <!--nav end-->
+        <!--iframe 框架-->
+        <iframe class="layou-template" src="templates/welcome.html" name="control"></iframe>
+        <!--/iframe 框架-->
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+
+    $(function(){
+         $('.nav-control').click(function(){
+             if($(this).siblings('.nav-list').css('display') == "block"){
+                 $(this).siblings('.nav-list').slideUp(300);
+                 return false;
+             }
+             $('.nav-control').removeClass('active');
+             $(this).addClass('active');
+             $(this).siblings('.nav-list').slideDown(300);
+         });
+        $('.nav-list a').click(function(){
+            $('.nav-list a').css({"background":"#29282a","color":"#939393"})
+            $('.nav-list a').find('img').hide();
+            $(this).css({"background":"#3d85cc","color":"#ffffff"});
+            $(this).find('img').show();
+        });
+    });
+</script>
+</html>

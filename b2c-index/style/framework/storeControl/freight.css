@@ -1,0 +1,27 @@
+.freight{ width: auto; height: auto; margin: 10px 20px 0 20px}
+.freight-list{ margin-top: 10px}
+.freight .freight-list table{ width: 100%; height: auto; min-width: 1100px}
+.freight .freight-list table tr th,.freight .freight-list table tr td{ text-align: center; vertical-align: middle}
+.freight .freight-list table tr td div{ width: 100%; height: auto; line-height: 20px; padding: 10px 0; }
+.freight .freight-list table tr td span{ width: auto; height: auto; display: inline-block; overflow: hidden  }
+.form-fle{ margin-bottom: 10px; padding-left: 0 !important;}
+
+.addFreight-list-weight{ display: none}
+.control-label{ cursor: pointer}
+#modal-dialog{ width: 1000px !important; height: auto;margin: 0 auto; margin-top: 30px; }
+.modal-body{ width: 100%; height: auto; max-height: 550px; overflow-y: auto }
+
+/*城市选取*/
+.area{ width: auto; height: auto; margin: 0 20px;}
+.area .area-city{margin-top: 15px}
+.area tbody tr td{text-align: left !important; vertical-align: baseline!important;}
+.area label{font-weight: normal;}
+.total-checkbox,.checkBox{ margin: 0 10px !important; top: -1px !important; width: 14px; height: 14px}
+.area .area-total{ font-size: 14px; margin-left: 40px; margin-top: 20px}
+.raDio{ top: 2px}
+.EditingArea{ color: #00b3ee}
+.radio-inline{ margin-top: 5px!important;}
+
+/*分页*/
+.list-add{ float: left;}
+.list-add span{ margin-right: 20px}
